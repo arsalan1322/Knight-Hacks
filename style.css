@@ -1,6 +1,6 @@
 * {
-  padding: 10px;
-  margin: 10px;
+  padding: 3px;
+  margin: 3px;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
@@ -14,14 +14,12 @@
   min-height: 100vh;
   overflow: hidden;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0;
-  background-color: rgba(0, 0, 0, 0.35);
+  justify-content: center;
+  align-items: left;
+  margin: 3;
 }
 
 #text {
-  display: flex;
 align-items: center;
 font-weight: bold;
 }
@@ -34,6 +32,7 @@ font-weight: bold;
   width: 300px;
   position: relative;
   transform: scale(1);
+  left: -500px;
 }
 
 .circle {
@@ -42,8 +41,8 @@ font-weight: bold;
   width: 100%;
   border-radius: 50%;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 0px;
+  left: 0px;
   z-index: -1;
 }
 
@@ -77,7 +76,7 @@ font-weight: bold;
   left: 140px;
   width: 20px;
   height: 190px;
-  animation: rotate 7.5s linear forwards infinite;
+  animation: rotate 4s linear forwards infinite;
   transform-origin: bottom center;
 }
 
@@ -92,7 +91,7 @@ font-weight: bold;
 }
 
 .container.grow {
-  animation: grow 3s linear forwards;
+  animation: grow 4s linear forwards;
 }
 
 @keyframes grow {
@@ -106,7 +105,7 @@ font-weight: bold;
 }
 
 .container.shrink {
-  animation: shrink 3s linear forwards;
+  animation: shrink 4s linear forwards;
 }
 
 @keyframes shrink {
@@ -131,31 +130,34 @@ font-weight: bold;
     height:100%;
 }
  /* the button's base size, shape, appearance */
-#playPauseButton{
-  position: relative;
-  /* the button's background color */
-  background: #fff; 
-  border: none;
-  outline:none;
-  height: 5em;
-  width: 5em;
-  font-size: 2em; 
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, .3);
-  cursor:pointer;
-   /* the button's a circle */ 
-	-moz-border-radius: 5em;
-	-webkit-border-radius: 5em;
-	border-radius: 5em;
-  
+ /* .playpause label {
+  display: block;
+  box-sizing: border-box;
+  width: 0;
+  height: 60px;
+  border-color: transparent transparent transparent white;
+  transition: 100ms all ease;
+  cursor: pointer;
+  border-style: double;
+  border-width: 0 0 0 60px;
 }
+.playpause input[type="checkbox"] {
+  visibility: hidden;
+}
+.playpause input[type="checkbox"]:checked + label {
+  border-style: solid;
+  border-width: 37px 0 37px 60px;
+  height: 60px;
+} */
 
-#playPauseButton:focus{
-  outline:none;
-}
 
  /* the button's top layer: size, shape, appearance */
-
-
+.zen {
+  height: 50px;
+}
+  .logo {
+    display: flex;
+  }
 /* end of pirooz part */
 
 /* START OF YILING PART */
@@ -163,19 +165,17 @@ font-weight: bold;
 .video {
   width: 100vw;
   height: 100vh;
-
   position: fixed;
   top: 0;
   left: 0;
   /* opacity: 0.5; */
-
   z-index: -1;
 }
+
 .video video {
   min-width: 100%;
   min-height: 100%;
   /* opacity: 0.99; */
-
   position: absolute;
   top: 50%;
   left: 50%;
