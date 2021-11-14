@@ -9,7 +9,7 @@
 
  body {
   /* background: #224941 url('./assets/img/fire.png') no-repeat center center/cover; */
-  color: rgb(63, 126, 43);
+  color: rgb(255, 255, 255);
   font-family: sans-serif;
   min-height: 100vh;
   overflow: hidden;
@@ -17,8 +17,14 @@
   flex-direction: column;
   align-items: center;
   margin: 0;
+  background-color: rgba(0, 0, 0, 0.35);
 }
 
+#text {
+  display: flex;
+align-items: center;
+font-weight: bold;
+}
 .container {
   display: flex;
   align-items: center;
@@ -31,7 +37,7 @@
 }
 
 .circle {
-  background-color: #010f1c;
+  background-color: #396c9c83;
   height: 100%;
   width: 100%;
   border-radius: 50%;
@@ -43,10 +49,10 @@
 
 .gradient-circle {
   background: conic-gradient(
-    rgb(39, 97, 223) 0%,
-    rgb(31, 85, 17) 33%,
-    #794d1b 66%,
-    #9e461e 100%
+    rgb(46, 101, 32) 0%,
+    rgb(83, 123, 59) 33%,
+    #c7a900 66%,
+    rgb(83, 123, 59) 100%
   );
   height: 320px;
   width: 320px;
@@ -58,10 +64,10 @@
 }
 
 .pointer {
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(198, 253, 253);
   border-radius: 50%;
-  height: 20px;
-  width: 20px;
+  height: 30px;
+  width: 30px;
   display: block;
 }
 
@@ -114,41 +120,42 @@
 }
 
 /* END OF ARSALAN'S PART */
-.playpause label {
-  display: block;
-  box-sizing: border-box;
-  width: 50px;
-  height: 74px;
-  border-color: transparent transparent transparent #202020;
-  transition: 100ms all ease;
-  cursor: pointer;
-  border-style: double;
-  border-width: 0px 0 0px 60px;
+  /* made this so i could visually center the shapes */
+
+  #backgroundplaceholder{
+	  /* background-color: black;  */
+    background-color: white; 
+    padding: 10em;
+		margin-left: 30%;
+    width:100%;
+    height:100%;
 }
-.playpause input[type="checkbox"] {
-  position: absolute;
-  left: -9999px; /* move checkbox off screen */
-}
-.playpause input[type="checkbox"]:checked + label {
-  border-style: solid;
-  border-width: 37px 0 37px 60px;
-  width: 50px;
-  height: 74px;
-  box-sizing: border-box;
-}
-.playpause input[type="checkbox"]:focus + label {
-  box-shadow: 0 0 5px lightblue;
+ /* the button's base size, shape, appearance */
+#playPauseButton{
+  position: relative;
+  /* the button's background color */
+  background: #fff; 
+  border: none;
+  outline:none;
+  height: 5em;
+  width: 5em;
+  font-size: 2em; 
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, .3);
+  cursor:pointer;
+   /* the button's a circle */ 
+	-moz-border-radius: 5em;
+	-webkit-border-radius: 5em;
+	border-radius: 5em;
+  
 }
 
-.play{
-  width: 40px;
-  height: 40px;
+#playPauseButton:focus{
+  outline:none;
 }
 
-.play img{
-  width: 50px;
-  height: 35px;
-}
+ /* the button's top layer: size, shape, appearance */
+
+
 /* end of pirooz part */
 
 /* START OF YILING PART */
@@ -160,16 +167,14 @@
   position: fixed;
   top: 0;
   left: 0;
-
-  opacity: 0.5;
+  /* opacity: 0.5; */
 
   z-index: -1;
 }
 .video video {
   min-width: 100%;
   min-height: 100%;
-
-  opacity: 0.5;
+  /* opacity: 0.99; */
 
   position: absolute;
   top: 50%;
