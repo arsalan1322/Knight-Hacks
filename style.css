@@ -1,10 +1,15 @@
 * {
+  padding: 10px;
+  margin: 10px;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
-body {
-  background: #224941 url('fire.png') no-repeat center center/cover;
-  color: #fff;
+/* START OF ARSALAN'S PART */
+
+ body {
+  /* background: #224941 url('./assets/img/fire.png') no-repeat center center/cover; */
+  color: rgb(63, 126, 43);
   font-family: sans-serif;
   min-height: 100vh;
   overflow: hidden;
@@ -14,13 +19,172 @@ body {
   margin: 0;
 }
 
-.container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 300px;
-    width: 300px;
-    margin: auto;
-    position: relative;
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  height: 300px;
+  width: 300px;
+  position: relative;
+  transform: scale(1);
+}
+
+.circle {
+  background-color: #010f1c;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.gradient-circle {
+  background: conic-gradient(
+    rgb(39, 97, 223) 0%,
+    rgb(31, 85, 17) 33%,
+    #794d1b 66%,
+    #9e461e 100%
+  );
+  height: 320px;
+  width: 320px;
+  z-index: -2;
+  border-radius: 50%;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+}
+
+.pointer {
+  background-color: rgb(0, 0, 0);
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  display: block;
+}
+
+.pointer-container {
+  position: absolute;
+  top: -40px;
+  left: 140px;
+  width: 20px;
+  height: 190px;
+  animation: rotate 7.5s linear forwards infinite;
+  transform-origin: bottom center;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.container.grow {
+  animation: grow 3s linear forwards;
+}
+
+@keyframes grow {
+  from {
     transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.2);
+  }
+}
+
+.container.shrink {
+  animation: shrink 3s linear forwards;
+}
+
+@keyframes shrink {
+  from {
+    transform: scale(1.2);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+/* END OF ARSALAN'S PART */
+.playpause label {
+  display: block;
+  box-sizing: border-box;
+  width: 50px;
+  height: 74px;
+  border-color: transparent transparent transparent #202020;
+  transition: 100ms all ease;
+  cursor: pointer;
+  border-style: double;
+  border-width: 0px 0 0px 60px;
+}
+.playpause input[type="checkbox"] {
+  position: absolute;
+  left: -9999px; /* move checkbox off screen */
+}
+.playpause input[type="checkbox"]:checked + label {
+  border-style: solid;
+  border-width: 37px 0 37px 60px;
+  width: 50px;
+  height: 74px;
+  box-sizing: border-box;
+}
+.playpause input[type="checkbox"]:focus + label {
+  box-shadow: 0 0 5px lightblue;
+}
+
+.play{
+  width: 40px;
+  height: 40px;
+}
+
+.play img{
+  width: 50px;
+  height: 35px;
+}
+/* end of pirooz part */
+
+/* START OF YILING PART */
+/* VIDEO */
+.video {
+  width: 100vw;
+  height: 100vh;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  opacity: 0.5;
+
+  z-index: -1;
+}
+.video video {
+  min-width: 100%;
+  min-height: 100%;
+
+  opacity: 0.5;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+
+
+/* FOR SMALL SCREENS */
+@media screen and (max-width: 600px) {
+  /* VIDEO */
+  .video video {
+    height: 100%;
+  }
 }
