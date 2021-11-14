@@ -2,7 +2,7 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 /* START OF ARSALAN'S PART */
@@ -15,9 +15,9 @@
   overflow: hidden;
   display: flex;
   justify-content: center;
-  align-items: left;
   margin: 2px;
   padding: 2px;
+  background-color: rgb(103, 187, 202);
 }
 
 #text {
@@ -33,7 +33,7 @@ font-weight: bold;
   width: 300px;
   position: relative;
   transform: scale(1);
-  left: -500px;
+  right: 162px;
 }
 
 .circle {
@@ -61,6 +61,7 @@ font-weight: bold;
   position: absolute;
   top: -10px;
   left: -10px;
+  opacity: 0.7;
 }
 
 .pointer {
@@ -69,6 +70,7 @@ font-weight: bold;
   height: 30px;
   width: 30px;
   display: block;
+  opacity: 0.7;
 }
 
 .pointer-container {
@@ -80,6 +82,7 @@ font-weight: bold;
   animation: rotate 4s linear forwards infinite;
   transform-origin: bottom center;
 }
+
 
 @keyframes rotate {
   from {
@@ -150,15 +153,17 @@ font-weight: bold;
   height: 40px;
 }
 
+.elementsinlove{
+  margin: auto; 
+  padding: 5px;
+}
+
 .playpause {
   position: fixed;
   top: 0;
   right: 1em;
 }
 
-/* #breath {
-
-} */
 
 .zen {
   height: 50px;
@@ -166,19 +171,9 @@ font-weight: bold;
   .logo {
     display: flex;
     padding: 10px;
+    align-items: left;
   }
 
-  .input {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 40px;
-  }
-  
-  .input label {
-    text-align: center;
-    font-size: 18px;
-    margin-bottom: 8px;
-  }
 /* end of pirooz part */
 
 /* START OF YILING PART */
@@ -191,16 +186,19 @@ font-weight: bold;
   left: 0;
   /* opacity: 0.5; */
   z-index: -1;
+  object-fit: cover;
 }
 
 .video video {
+  width: 100vw;
+  height: 100vh;
   min-width: 100%;
-  min-height: 100%;
+  min-height: 100%; 
   /* opacity: 0.99; */
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  object-fit: cover;
 }
 
 
