@@ -11,22 +11,22 @@
 
 <body>
 
-    <!-- <div class="playpause">
+    <div class="playpause">
         <input type="checkbox" value="None" id="playpause" name="check" />
         <label for="playpause"></label>
-      </div> -->
+      </div>
 
 
     <!-- for the video yiling -->
     <div class="video">
-        <video autoplay loop>
+        <video loop>
             <source src="./assets/video/stones.mp4" type="video/mp4">
         </video>
     </div>
 
     <!-- for the audio yiling-->
     <div class="audio">
-         <audio autoplay loop>
+         <audio loop>
             <source src="./assets/audio/zen_audio.mp3" type="audio/mp3">
         </audio>
     </div>
@@ -37,6 +37,12 @@
         <h1>Knight Hax-Relax</h1>
         <img class="zen" src="./assets/img/zen.svg" alt="Knight Hax-Relax">
         </div>
+    <!-- <div class=breathing></div> -->
+        <!-- <div class="input">
+            <label for="breath">Enter the breaths you want to do:</label>
+            <input maxlength="2" type="text" id="breath" name="breath"
+                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+        </div> -->
         <div class="container" id="container">
             <div class="circle"></div>
 
@@ -48,6 +54,7 @@
 
             <div class="gradient-circle"></div>
         </div>
+    <!-- </div> -->
         
         <script src="script.js"></script>
 
